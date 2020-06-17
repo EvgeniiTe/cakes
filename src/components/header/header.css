@@ -1,6 +1,6 @@
 header {
     padding: 35px 0 0 0;
-    background-color: #C2C3D5; 
+    background-color: #C2C3D5;
     margin: 0;
 }
 
@@ -28,29 +28,27 @@ header {
     cursor: pointer;
 }
 
-nav {
+/* nav {
     padding: 15px 0;
     margin: 0;
-}
+} */
 
-nav ul {
+/* nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-}
+} */
 
-nav li {
+/* nav li {
     margin-right: 150px;
     font-size: large;
-}
+} */
 
-nav li:last-child {
+/* nav li:last-child {
     margin-right: 0;
-}
-
+} */
+/* 
 nav li:hover {
     transform: scale(1.2);
     transition: transform 1s ease;
-}
-
-
+} */

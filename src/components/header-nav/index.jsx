@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { getNavMain } from "../../services/service";
+import { Nav, Ul, Li } from "./styled";
 
 export class HeaderNav extends Component {
   state = { navMain: [] };
@@ -20,16 +21,16 @@ export class HeaderNav extends Component {
 
     const navMainMap = navMain.map(({ navMainWord, navMainRef }) => {
       return (
-        <li key={navMainWord}>
+        <Li key={navMainWord}>
           <a href={navMainRef}>{navMainWord}</a>
-        </li>
+        </Li>
       );
     });
 
     return (
-      <nav>
-        <ul>{navMainMap}</ul>
-      </nav>
+      <Nav>
+        <Ul>{navMainMap}</Ul>
+      </Nav>
     );
   }
 }
