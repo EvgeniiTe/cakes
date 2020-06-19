@@ -1,6 +1,7 @@
 import React from "react";
 import { CreateDiv } from "../create-div";
 import { headerElements } from "../header-footer-elements";
+import * as S from "./styled";
 
 export const HeaderTop = () => {
   const headerElementsMap = headerElements.map(
@@ -8,9 +9,5 @@ export const HeaderTop = () => {
       <CreateDiv key={element} childEl={element(props)} className={className} />
     )
   );
-  return (
-    <div className="header-footer-container header-container">
-      {headerElementsMap}
-    </div>
-  );
+  return <S.HeaderContainer>{headerElementsMap}</S.HeaderContainer>;
 };

@@ -1,7 +1,8 @@
 import React from "react";
+import * as S from "./styled";
 
 export const CreateDiv = ({ className, childEl }) => (
-  <div className={className}>
+  <S.CreateDiv className={className}>
     {typeof childEl === "function" ? childEl({}) : childEl}
-  </div>
+  </S.CreateDiv>
 );

@@ -1,6 +1,7 @@
 import React from "react";
 import { CreateDiv } from "../create-div";
 import { footerElements } from "../header-footer-elements";
+import * as S from "../footer/styled";
 
 export const FooterBottom = () => {
   const footerElementsMap = footerElements.map(
@@ -9,9 +10,5 @@ export const FooterBottom = () => {
     )
   );
 
-  return (
-    <div className="header-footer-container footer-container">
-      {footerElementsMap}
-    </div>
-  );
+  return <S.FooterContainer>{footerElementsMap}</S.FooterContainer>;
 };

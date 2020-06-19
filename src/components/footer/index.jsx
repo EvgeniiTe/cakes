@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./footer.css";
+import * as S from "./styled";
 
 import { FooterBottom } from "../footer-bottom";
 
 export const Footer = () => (
-  <footer>
+  <S.Footer>
     <FooterBottom />
-  </footer>
+  </S.Footer>
 );

@@ -5,16 +5,18 @@ import { MainInfo } from "../main-info";
 import { Products } from "../products";
 import { MyStory } from "../my-story";
 import { Footer } from "../footer";
+import * as S from "./styled";
 
 export const App = () => (
   <>
+    <S.GlobalStyle />
     <Header />
     <main>
-      <div className="main-container">
+      <S.MainContainer>
         <MainInfo />
         <Products />
         <MyStory />
-      </div>
+      </S.MainContainer>
     </main>
     <Footer />
   </>

@@ -1,9 +1,9 @@
-header {
+/* header {
     padding: 35px 0 0 0;
     background-color: #C2C3D5;
     margin: 0;
-}
-
+} */
+/* 
 .header-footer-container {
     max-width: 1920px;
     display: flex;
@@ -11,22 +11,22 @@ header {
     padding: 0 20px;
     color: #ffffff;
     margin: auto;
-}
+} */
 
-.header-container .flex-item {
+/* .header-container .flex-item {
     width: 300px;
     height: auto;
-}
-
+} */
+/* 
 .logo {
     text-align: center;
-}
+} */
 
-.name {
+/* .name {
     font-weight: bold;
     font-size: 45px;
     cursor: pointer;
-}
+} */
 
 /* nav {
     padding: 15px 0;
