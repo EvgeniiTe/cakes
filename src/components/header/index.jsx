@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./header.css";
 import * as S from "./styled";
 
 import { HeaderTop } from "../header-top";

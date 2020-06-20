@@ -3,8 +3,7 @@ import { mainInfoFill } from "../../services/service";
 import { PMap } from "../p-map";
 import { CreateDiv } from "../create-div";
 import { CreateHeading } from "../create-heading";
-
-import "./main-info.css";
+import * as S from "./styled";
 
 export class MainInfo extends Component {
   state = { mainInfo: [] };
@@ -23,15 +22,15 @@ export class MainInfo extends Component {
     const { mainInfo } = this.state;
 
     const linkStory = () => {
-      return <a href="#MyStory">Моя история</a>;
+      return <S.MyStoryLink href="#MyStory">Моя история</S.MyStoryLink>;
     };
 
     return (
-      <section id="MainInfo" className="main-info">
+      <S.MainInfo>
         <CreateHeading h="h1" text="Торты на заказ" />
         <PMap data={mainInfo} />
-        <CreateDiv className="my-story" childEl={linkStory} />
-      </section>
+        <CreateDiv className="MyStoryLink" childEl={linkStory} />
+      </S.MainInfo>
     );
   }
 }

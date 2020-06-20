@@ -1,4 +1,6 @@
+import React from "react";
 import styled from "styled-components";
+import * as S from "../footer/styled";
 
 function flexItem() {
   return `
@@ -25,4 +27,8 @@ export const CreateDiv = styled.div`
   ${(props) => (props.className.includes("logo") ? logo() : null)};
 
   ${(props) => (props.className.includes("name") ? name() : null)};
+
+  ${(props) => (props.className === "FooterLogo" ? <S.FooterLogo /> : null)};
+
+  ${(props) => (props.className === "FooterName" ? S.FooterName() : null)};
 `;

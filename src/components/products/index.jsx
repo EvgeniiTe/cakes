@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 
-import "./products.css";
-
 import { ProductsList } from "../products-list";
 import { Product } from "../product";
 import { getAllCakes } from "../../services/service";
+import * as S from "./styled";
 
 export class Products extends Component {
   state = {
@@ -30,10 +29,10 @@ export class Products extends Component {
     const { itemId, dataList } = this.state;
 
     return (
-      <section id="Products" className="products">
+      <S.Products>
         <ProductsList data={dataList} selectItem={this.selectItem} />
         <Product itemId={itemId} />
-      </section>
+      </S.Products>
     );
   }
 }

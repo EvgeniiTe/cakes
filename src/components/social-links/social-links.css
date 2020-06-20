@@ -1,9 +1,0 @@
-.social-links {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.social-link:hover {
-    transform: scale(1.2);
-    transition: transform 1s ease;
-}

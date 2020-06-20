@@ -7,17 +7,13 @@ const name = () => {
 };
 
 export const headerElements = [
-  { element: name, className: "name flex-item" },
-  { element: Logo, className: "logo flex-item", props: { height: "280rem" } },
-  { element: SocialLinks, className: "flex-item" },
+  { element: name, className: "HeaderName" },
+  { element: Logo, className: "HeaderLogo", props: { height: "280rem" } },
+  { element: SocialLinks, className: "FlexItem" },
 ];
 
-const temp = headerElements.find((item) => item.element === Logo);
-const footerLogo = { ...temp };
-footerLogo.props = { height: "100rem" };
-
 export const footerElements = [
-  footerLogo,
-  headerElements[0],
-  headerElements[2],
+  { element: Logo, className: "FooterLogo", props: { height: "100rem" } },
+  { element: name, className: "FooterName" },
+  { element: SocialLinks, className: "FlexItem" },
 ];

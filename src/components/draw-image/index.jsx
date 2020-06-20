@@ -1,8 +1,8 @@
 import React from "react";
 
-export const DrawImage = ({ className, src, height, width, alt, title }) => (
+export const DrawImage = ({ styleName, src, height, width, alt, title }) => (
   <img
-    className={className}
+    style={styleName}
     src={src}
     height={height}
     width={width}

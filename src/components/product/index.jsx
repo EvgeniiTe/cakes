@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
-import "./product.css";
+import * as S from "./styled";
 
 import { getCake } from "../../services/service";
 import { DrawImage } from "../draw-image";
+
+const ProductImg = { marginLeft: "auto" };
 
 export class Product extends Component {
   state = { selectedItem: null };
@@ -41,18 +43,18 @@ export class Product extends Component {
     const { name, description, picture } = selectedItem;
 
     return (
-      <article className="product">
-        <div className="product-container">
-          <h2 className="product-name">{name}</h2>
-          <p className="product-info">{description}</p>
-        </div>
+      <S.Product>
+        <S.ProductContainer>
+          <S.ProductName>{name}</S.ProductName>
+          <S.ProductInfo>{description}</S.ProductInfo>
+        </S.ProductContainer>
         <DrawImage
-          className="product-img"
+          styleName={ProductImg}
           src={picture}
           width="600px"
           alt={name}
         />
-      </article>
+      </S.Product>
     );
   }
 }

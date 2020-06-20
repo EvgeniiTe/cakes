@@ -1,7 +1,7 @@
 import React from "react";
 import { CreateDiv } from "../create-div";
 import { headerElements } from "../header-footer-elements";
-import * as S from "./styled";
+import * as S from "../header/styled";
 
 export const HeaderTop = () => {
   const headerElementsMap = headerElements.map(
