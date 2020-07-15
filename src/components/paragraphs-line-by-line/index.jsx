@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PMap = ({ data }) => {
+export const ParagraphsLineByLine = ({ data }) => {
   const dataMap = data.map((item) => {
     return <p>{item}</p>;
   });

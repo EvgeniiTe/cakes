@@ -1,36 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
+import { withApiRequest } from "../hoc-helpers/withApiRequest";
 
-import { getNavMain } from "../../services/service";
+
 import * as S from "./styled";
 
-export class HeaderNav extends Component {
-  state = { navMain: [] };
 
-  componentDidMount() {
-    this.getNavInfo();
-  }
+const Temp = (props) => {
+  const { response } = props;
 
-  getNavInfo() {
-    getNavMain().then((data) => {
-      this.setState({ navMain: data });
-    });
-  }
-
-  render() {
-    const { navMain } = this.state;
-
-    const navMainMap = navMain.map(({ navMainWord, navMainRef }) => {
-      return (
+  const navMainMap = response.map(({ navMainWord, navMainRef }) => {
+    return (
         <S.Li key={navMainWord}>
           <a href={navMainRef}>{navMainWord}</a>
         </S.Li>
       );
     });
 
-    return (
-      <S.Nav>
+  return (
+<S.Nav>
         <S.Ul>{navMainMap}</S.Ul>
       </S.Nav>
-    );
-  }
-}
+)
+};
+
+export const HeaderNav = withApiRequest("getNavMain", Temp);

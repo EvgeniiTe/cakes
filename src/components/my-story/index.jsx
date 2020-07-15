@@ -1,30 +1,20 @@
-import React, { Component } from "react";
-import { storyInfoFill } from "../../services/service";
-import { PMap } from "../p-map";
+import React from "react";
+import { ParagraphsLineByLine } from "../paragraphs-line-by-line";
 import { CreateHeading } from "../create-heading";
 import * as S from "./styled";
+import { withApiRequest } from "../hoc-helpers/withApiRequest";
 
-export class MyStory extends Component {
-  state = { storyInfo: [] };
+const Temp = (props) => {
+  const { response } = props;
 
-  componentDidMount() {
-    this.getStoryInfo();
-  }
-
-  getStoryInfo() {
-    storyInfoFill().then((data) => {
-      this.setState({ storyInfo: data });
-    });
-  }
-
-  render() {
-    const { storyInfo } = this.state;
-
-    return (
-      <S.Story>
+  return (
+<S.Story>
         <CreateHeading h="h2" text="Моя история" />
-        <PMap data={storyInfo} />
+        <ParagraphsLineByLine data={response} />
       </S.Story>
-    );
-  }
-}
+  );
+};
+
+
+export const MyStory = withApiRequest("storyInfoFill", Temp);
+

@@ -7,6 +7,7 @@ import { MyStory } from "../my-story";
 import { Footer } from "../footer";
 import * as S from "./styled";
 
+
 export const App = () => (
   <>
     <S.GlobalStyle />
